@@ -1,10 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 function Nav() {
   return (
     <section className="NavSection">
       <div>
-        <img style={{width:'50px'}} src="images/planet.png" />
+        <img style={{ width: '50px' }} src="images/planet.png" alt="brand logo" />
       </div>
       <nav>
         <NavLink to="/"> Rocket </NavLink>

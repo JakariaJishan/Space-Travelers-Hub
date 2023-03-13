@@ -1,8 +1,8 @@
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import Missions from "./components/Missions";
-import Nav from "./components/Nav";
-import Profile from "./components/Profile";
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import Missions from './components/Missions';
+import Nav from './components/Nav';
+import Profile from './components/Profile';
 
 function App() {
   return (
