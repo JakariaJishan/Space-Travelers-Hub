@@ -1,16 +1,18 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 function Nav() {
   return (
-    <sectrion class = "NavSection">
+    <section className="NavSection">
+      <div>
+        <img style={{ width: '50px' }} src="images/planet.png" alt="brand logo" />
+      </div>
       <nav>
         <NavLink to="/"> Rocket </NavLink>
-        <NavLink to="">Missions</NavLink>
-        <NavLink to="">Profile</NavLink>
+        <NavLink to="/missions">Missions</NavLink>
+        <NavLink to="/profiles">Profile</NavLink>
       </nav>
-      <div class="logo">Logo</div>
-    </sectrion>
-  )
+    </section>
+  );
 }
 
-export defautl Nav
+export default Nav;
