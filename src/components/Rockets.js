@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchRockets } from '../app/missions/rocketsSlice';
 
 function Rockets() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchRockets());
+  }, []);
+
   return (
-    <div>Rockets</div>
+    <div>Rockets go</div>
   );
 }
 
