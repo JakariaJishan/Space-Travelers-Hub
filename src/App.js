@@ -1,11 +1,18 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import Layouts from './components/Layouts';
-import Missions from './components/Missions';
-import Profile from './components/Profile';
-import Rockets from './components/Rockets';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { fetchMissions } from "./app/missions/missionsSlice";
+import Layouts from "./components/Layouts";
+import Missions from "./components/Missions";
+import Profile from "./components/Profile";
+import Rockets from "./components/Rockets";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, []);
   return (
     <Routes>
       <Route path="/" element={<Layouts />}>
