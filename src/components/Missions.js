@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMissions } from "../app/missions/missionsSlice";
+import { fetchMissions, joinMissions } from "../app/missions/missionsSlice";
 import RenderMissions from "./RenderMissions";
 
 function Missions() {
@@ -9,12 +9,16 @@ function Missions() {
 
   useEffect(() => {
     dispatch(fetchMissions());
-  }, []);
+  }, [dispatch]);
+
+  const handleJoin = (id) => {
+    dispatch(joinMissions(id))
+  }
 
   return (
     <div>
       {missions.map((mission) => (
-        <RenderMissions key={mission.mission_id} mission={mission} />
+        <RenderMissions key={mission.mission_id} mission={mission} handleJoin={handleJoin}/>
       ))}
     </div>
   );
