@@ -1,13 +1,23 @@
 import React from 'react';
 
-function RenderRockets({ rocket }) {
+function RenderRockets({ rocket, handleReserve, handleUnreserve }) {
   //console.log(rocket);
-  const { name, type, flickr_images } = rocket
+  const { id, name, type, flickr_images, reserved } = rocket
   return (
     <div>
-      id:{rocket.id} |
+      id:{id} |
       name:{name} |
-      type:{type} |
+      type:{reserved} |
+      {reserved ? <b></b> : <b>Reserved</b>}
+      {reserved ? (
+        <button type="button" onClick={() => handleReserve(id)}>
+          Reserve Rocket
+        </button>
+      ): (
+        <button type="button" onClick={() => handleUnrerved(mission_id)}>
+          Cancel Reservation
+        </button>
+      )}
     </div>
   )
 }
