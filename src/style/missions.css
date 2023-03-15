@@ -11,9 +11,12 @@
 button {
   padding: 8px;
   background-color: transparent;
-  border-radius: 3px;
+  border-radius: 7px;
   align-self: center;
   justify-self: center;
+  margin-block: 2%;
+  font-size: large;
+  color: gray;
 }
 
 .red {
@@ -25,7 +28,8 @@ button {
   background-color: #4cc3f1;
   color: white;
   border-radius: 3px;
-  padding: 3px;
+  padding: 5px;
+  margin-right: 1%;
 }
 
 .gray {

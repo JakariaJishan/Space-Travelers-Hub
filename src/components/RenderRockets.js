@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/rockets.css';
 
 function RenderRockets({ rocket, handleReserve, handleUnrerved }) {
   const {
@@ -6,12 +7,14 @@ function RenderRockets({ rocket, handleReserve, handleUnrerved }) {
   } = rocket;
   const images = rocket.flickr_images;
   return (
-    <div>
-      <img className="rocket-img" src={images} alt={name} />
+    <div className="rocket">
+      <img style={{ width: '90%' }} className="rocket-img" src={images} alt={name} />
       <section>
         <h2>{name}</h2>
-        {reserved ? <b className="cyan">Reserved</b> : <b />}
-        <b>{description}</b>
+        <div>
+          {reserved ? <b className="cyan">Reserved</b> : <p />}
+          <b>{description}</b>
+        </div>
         {reserved ? (
           <button type="button" onClick={() => handleUnrerved(id)}>
             Cancel Reservation
