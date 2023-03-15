@@ -13,6 +13,7 @@ function Missions() {
   const handleLeave = (id) => {
     dispatch(leaveMissions(id));
   };
+  
 
   return (
     <div>
