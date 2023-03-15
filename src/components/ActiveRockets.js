@@ -2,7 +2,7 @@ import React from "react";
 
 function ActiveRocket({ activeRocket }) {
   return <div>
-    <h3>{activeRocket.rocket.name}</h3>
+    <h3>{activeRocket.name}</h3>
   </div>;
 }
 
