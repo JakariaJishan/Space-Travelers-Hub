@@ -2,7 +2,6 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import RenderMissions from "./RenderMissions";
 
 const handleLeave = jest.fn();
-const handleJoin = jest.fn();
 
 const missions = [
   {
@@ -12,7 +11,7 @@ const missions = [
   },
 ];
 describe("test click events", () => {
-  test("when clicked, calls onClick with missions", async () => {
+  it("when clicked, calls onClick with missions", async () => {
     const { queryByText } = render(
       missions.map((mission) => (
         <RenderMissions
@@ -26,7 +25,6 @@ describe("test click events", () => {
     fireEvent.click(screen.queryByText("Leave Mission"));
 
     expect(handleLeave).toHaveBeenCalledTimes(1);
-    expect(handleLeave).toBeCalledWith(missions[0].mission_id)
-
+    expect(handleLeave).toBeCalledWith(missions[0].mission_id);
   });
 });

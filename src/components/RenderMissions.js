@@ -20,9 +20,7 @@ function RenderMissions({ mission, handleJoin, handleLeave }) {
         <button
           type="button"
           onClick={() => handleJoin(id)}
-        >
-          Join Mission
-        </button>
+        >Join Mission</button>
       )}
     </div>
   );
