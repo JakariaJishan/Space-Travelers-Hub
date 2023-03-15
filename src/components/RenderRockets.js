@@ -10,11 +10,11 @@ function RenderRockets({ rocket, handleReserve, handleUnrerved}) {
       type:{type} |
       {reserved ? <b></b> : <b>Reserved</b>}
       {reserved ? (
-        <button type="button" onClick={() => handleReserve(id)}>
+        <button type="button" onClick={() => handleUnrerved(id)}>
           Reserve Rocket
         </button>
       ) : (
-        <button type="button" onClick={() => handleUnrerved(mission_id)}>
+        <button type="button" onClick={() => handleReserve(id)}>
           Cancel Reservation
         </button>
       )}
