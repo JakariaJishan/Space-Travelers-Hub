@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets } from '../app/missions/rocketsSlice';
+import { fetchRockets } from '../app/rockets/rocketsSlice';
 import RenderRockets from './RenderRockets';
 
 function Rockets() {
@@ -14,7 +14,7 @@ function Rockets() {
   return (
     <div>
       {rockets.map((rocket) => (
-        <RenderRockets key={rocket.rocket_id} rocket={rocket} />
+        <RenderRockets key={rocket.id} rocket={rocket} />
       ))}
     </div>
   );

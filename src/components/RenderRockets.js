@@ -8,7 +8,6 @@ function RenderRockets({ rocket }) {
       id:{rocket.id} |
       name:{name} |
       type:{type} |
-      flickr_images:{flickr_images}
     </div>
   )
 }
