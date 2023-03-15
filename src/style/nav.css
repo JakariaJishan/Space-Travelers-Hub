@@ -24,6 +24,5 @@ font-weight: bold;
 }
 
 .active {
-  text-decoration: underline solid ;
-  color: brown;
+  border-bottom: rgb(0, 195, 255) 1px solid;
 }

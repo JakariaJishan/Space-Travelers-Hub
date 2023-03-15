@@ -1,0 +1,42 @@
+.mission_container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr 1fr;
+}
+
+.mission_container:nth-child(odd) {
+	background: #eeeeee;
+  border: gray 1px solid;
+}
+
+button {
+  padding: 8px;
+  background-color: transparent;
+  border-radius: 3px;
+  align-self: center;
+  justify-self: center;
+}
+
+.red {
+  border-color: red;
+  color: red;
+}
+
+.cyan {
+  background-color: #4cc3f1;
+  color: white;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.gray {
+  background-color: gray;
+  color: white;
+  border-radius: 3px;
+  padding: 3px;
+  font-weight: normal;
+}
+
+.blue {
+  background-color: rgb(0, 140, 255);
+  color: white;
+}
