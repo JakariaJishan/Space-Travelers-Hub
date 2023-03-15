@@ -1,22 +1,22 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
   missions: [],
 };
 
-const url = "https://api.spacexdata.com/v3/missions";
+const url = 'https://api.spacexdata.com/v3/missions';
 
 export const fetchMissions = createAsyncThunk(
-  "missions/fetchMissions",
+  'missions/fetchMissions',
   async () => {
     const res = await axios.get(url);
     return res.data;
-  }
+  },
 );
 
 export const missionsSlice = createSlice({
-  name: "missions",
+  name: 'missions',
   initialState,
   reducers: {
     joinMissions: (state, action) => {
@@ -24,30 +24,28 @@ export const missionsSlice = createSlice({
         (mission) => {
           if (mission.mission_id !== action.payload) {
             return mission;
-          } else {
-            return { ...mission, reserved: true };
           }
-        }
+          return { ...mission, reserved: true };
+        },
       );
-      return {...JSON.parse(JSON.stringify(state)), missions : newState };
+      return { ...JSON.parse(JSON.stringify(state)), missions: newState };
     },
     leaveMissions: (state, action) => {
       const newState = JSON.parse(JSON.stringify(state)).missions.map(
         (mission) => {
           if (mission.mission_id !== action.payload) {
             return mission;
-          } else {
-            return { ...mission, reserved: false };
           }
-        }
+          return { ...mission, reserved: false };
+        },
       );
-      return {...JSON.parse(JSON.stringify(state)), missions : newState };
+      return { ...JSON.parse(JSON.stringify(state)), missions: newState };
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchMissions.fulfilled, (state, action) =>({
+    builder.addCase(fetchMissions.fulfilled, (state, action) => ({
       ...state,
-      missions : action.payload
+      missions: action.payload,
     }));
   },
 });

@@ -1,17 +1,24 @@
-import React from "react";
+import React from 'react';
 
 function RenderMissions({ mission, handleJoin, handleLeave }) {
-  const { mission_id, mission_name, reserved } = mission;
+  const id = mission.mission_id;
+  const name = mission.mission_name;
+  const { reserved } = mission;
   return (
     <div>
-      id:{mission_id} | mission name: {mission_name}
+      id:
+      {id}
+      {' '}
+      | mission name:
+      {' '}
+      {name}
       {reserved ? <b>Active Member</b> : <b>NOT A MEMBER</b>}
       {reserved ? (
-        <button type="button" onClick={() => handleLeave(mission_id)}>
+        <button type="button" onClick={() => handleLeave(id)}>
           Leave Mission
         </button>
       ) : (
-        <button type="button" onClick={() => handleJoin(mission_id)}>
+        <button type="button" onClick={() => handleJoin(id)}>
           Join Mission
         </button>
       )}

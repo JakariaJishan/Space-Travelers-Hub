@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from "axios";
+import axios from 'axios';
 
 const initialState = {
   rockets: [],
@@ -12,10 +12,11 @@ export const fetchRockets = createAsyncThunk(
   async () => {
     const res = await axios.get(url);
     return res.data;
-});
+  },
+);
 
 export const rocketsSlice = createSlice({
-  name: "rockets",
+  name: 'rockets',
   initialState,
   reducers: {
     reserveRocket: (state, action) => {
@@ -23,32 +24,30 @@ export const rocketsSlice = createSlice({
         (rocket) => {
           if (rocket.id !== action.payload) {
             return rocket;
-          } else {
-            return { ...rocket, reserved: true };
           }
-        }
+          return { ...rocket, reserved: true };
+        },
       );
       return { ...JSON.parse(JSON.stringify(state)), rockets: newState };
     },
-    
+
     cancelRocket: (state, action) => {
       const newState = JSON.parse(JSON.stringify(state)).rockets.map(
         (rocket) => {
           if (rocket.id !== action.payload) {
             return rocket;
-          } else {
-            return { ...rocket, reserved: false };
           }
-        }
+          return { ...rocket, reserved: false };
+        },
       );
-      return {...JSON.parse(JSON.stringify(state)), rockets : newState };
+      return { ...JSON.parse(JSON.stringify(state)), rockets: newState };
     },
   },
 
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => ({
       ...state,
-      rockets: action.payload
+      rockets: action.payload,
     }));
   },
 });
