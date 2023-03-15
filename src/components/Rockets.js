@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, reserveRocket } from '../app/rockets/rocketsSlice';
+import { fetchRockets, reserveRocket, cancelRocket } from '../app/rockets/rocketsSlice';
 import RenderRockets from './RenderRockets';
 
 function Rockets() {
@@ -13,12 +13,21 @@ function Rockets() {
 
   const handleReserve = (id) => {
     dispatch(reserveRocket(id))
-  }
+  };
+
+  const handleUnrerved = (id) => {
+    dispatch(cancelRocket(id))
+;  }
 
   return (
     <div>
       {rockets.map((rocket) => (
-        <RenderRockets key={rocket.id} rocket={rocket} handleReserve={handleReserve}/>
+        <RenderRockets
+          key={rocket.id}
+          rocket={rocket}
+          handleReserve={handleReserve}
+          handleUnrerved={handleUnrerved}
+        />
       ))}
     </div>
   );
