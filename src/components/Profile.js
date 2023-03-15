@@ -8,7 +8,7 @@ function Profile() {
   const activeMissions = missions.filter((mission) => mission.reserved);
   const rockets = useSelector((state) => state.rockets.rockets);
   const activeRocket = rockets.filter((rocket) => rocket.reserved);
-  
+
   return (
     <div>
       {activeMissions.map((activeMission) => (
