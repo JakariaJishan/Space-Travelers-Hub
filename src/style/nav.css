@@ -1,0 +1,29 @@
+.NavSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px lightgrey solid;
+  padding-bottom: 2%;
+}
+
+.header {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #00b7ff;
+font-weight: bold;
+}
+
+.active {
+  text-decoration: underline solid ;
+  color: brown;
+}

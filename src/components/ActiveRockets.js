@@ -1,9 +1,10 @@
 import React from 'react';
+import '../style/profile.css';
 
 function ActiveRocket({ activeRocket }) {
   return (
     <div>
-      <h3>{activeRocket.name}</h3>
+      <p className="activ">{activeRocket.name}</p>
     </div>
   );
 }
