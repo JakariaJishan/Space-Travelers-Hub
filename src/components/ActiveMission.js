@@ -3,6 +3,7 @@ import React from 'react';
 function ActiveMission({ activeMission }) {
   return (
     <div>
+      <h2>My Missions</h2>
       <h3>{activeMission.mission_name}</h3>
     </div>
   );
