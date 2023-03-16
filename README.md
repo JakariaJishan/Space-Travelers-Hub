@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-   <h1><b>Calculator</b></h1>
+   <h1><b>Space Travelers Hub</b></h1>
   <!-- <img src="./src/assets/readme_img.png" alt="calculator image" width="100%" /> -->
 </div>
 
@@ -31,9 +31,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Calculator <a name="about-project"></a>
+# 📖 Space Travelers Hub <a name="about-project"></a>
 
-**Calculator react** is a webapp built using React.
+**Space Travelers Hub** is a webapp built using React & Redux.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -70,7 +70,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Calculator is currently on construction so it does not have features yet.**
+- **Space Travelers Hub is currently on construction so it does not have features yet.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +103,7 @@ Clone this repository in the desired folder:
 
 ```
 cd my-folder
-git clone https://github.com/JakariaJishan/calculator-react.git
+git clone https://github.com/JakariaJishan/Space-Travelers-Hub.git
 ```
 
 ### Install
@@ -111,7 +111,7 @@ git clone https://github.com/JakariaJishan/calculator-react.git
 To install this project:
 
 ```
-cd calculator-react
+cd Space-Travelers-Hub
 code .
 npm install
 ```
@@ -134,6 +134,11 @@ npm start
 
 - GitHub: [@jakaria](https://github.com/JakariaJishan)
 
+
+👤 **Felipe Haybar Valenzuela**
+
+- GitHub: [@Felipe](https://github.com/Feliverse)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -142,7 +147,6 @@ npm start
 
 - [ ] **Cool React components will be added in the future**
 - [ ] **Events and hooks will be used**
-- [ ] **The webapp will be unit tested**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
