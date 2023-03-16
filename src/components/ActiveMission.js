@@ -1,9 +1,10 @@
 import React from 'react';
+import '../style/profile.css';
 
 function ActiveMission({ activeMission }) {
   return (
     <div>
-      <h3>{activeMission.mission_name}</h3>
+      <p className="activ">{activeMission.mission_name}</p>
     </div>
   );
 }

@@ -1,15 +1,18 @@
 import { NavLink } from 'react-router-dom';
+import '../style/nav.css';
 
 function Nav() {
   return (
     <section className="NavSection">
-      <div>
-        <img style={{ width: '50px' }} src="images/planet.png" alt="brand logo" />
+      <div className="header">
+        <img style={{ width: '10%' }} src="images/planet.png" alt="brand logo" />
+        <h1>Space Travelers Hub</h1>
       </div>
-      <h1>Space Travelers Hub</h1>
-      <nav>
+
+      <nav className="nav">
         <NavLink to="/"> Rocket </NavLink>
         <NavLink to="/missions">Missions</NavLink>
+        <p>|</p>
         <NavLink to="/profiles">Profile</NavLink>
       </nav>
     </section>

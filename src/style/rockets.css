@@ -1,0 +1,9 @@
+.rocket {
+  padding: 2%;
+  display: grid;
+  grid-template-columns: 300px 4fr;
+}
+
+h2 {
+  margin-top: 1px;
+}
