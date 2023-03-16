@@ -4,21 +4,25 @@ exports[`testing Missions test component renders correctly 1`] = `
 <section
   className="NavSection"
 >
-  <div>
+  <div
+    className="header"
+  >
     <img
       alt="brand logo"
       src="images/planet.png"
       style={
         Object {
-          "width": "50px",
+          "width": "10%",
         }
       }
     />
+    <h1>
+      Space Travelers Hub
+    </h1>
   </div>
-  <h1>
-    Space Travelers Hub
-  </h1>
-  <nav>
+  <nav
+    className="nav"
+  >
     <a
       aria-current="page"
       className="active"
@@ -34,6 +38,9 @@ exports[`testing Missions test component renders correctly 1`] = `
     >
       Missions
     </a>
+    <p>
+      |
+    </p>
     <a
       className=""
       href="/profiles"

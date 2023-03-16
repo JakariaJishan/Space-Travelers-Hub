@@ -6,17 +6,21 @@ Object {
   "baseElement": <body>
     <div>
       <div>
-        <h3>
+        <p
+          class="activ"
+        >
           falcon 1
-        </h3>
+        </p>
       </div>
     </div>
   </body>,
   "container": <div>
     <div>
-      <h3>
+      <p
+        class="activ"
+      >
         falcon 1
-      </h3>
+      </p>
     </div>
   </div>,
   "debug": [Function],
