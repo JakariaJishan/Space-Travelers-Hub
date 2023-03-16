@@ -1,11 +1,11 @@
 .profile {
-  display:grid;
+  display: grid;
   grid-template-columns: 47% 47%;
   gap: 6%;
 }
 
 .activ {
   border: lightgray 1px solid;
-  margin:0;
+  margin: 0;
   padding: 2% 3% 4%;
 }
