@@ -11,18 +11,21 @@ import Rockets from './components/Rockets';
 
 function App() {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchMissions());
     dispatch(fetchRockets());
   }, [dispatch]);
   return (
-    <Routes>
-      <Route path="/" element={<Layouts />}>
-        <Route index element={<Rockets />} />
-        <Route path="missions" element={<Missions />} />
-        <Route path="profiles" element={<Profile />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Layouts />}>
+          <Route index element={<Rockets />} />
+          <Route path="missions" element={<Missions />} />
+          <Route path="profiles" element={<Profile />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
